@@ -1,0 +1,398 @@
+@font-face {
+    font-family: 'Akrobat'; 
+    src: url(../fonts/Akrobat.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Akrobat'; 
+    src: url(../fonts/Akrobat.ttf) format('truetype');
+
+}
+@font-face {
+    font-family: 'Akrobat'; 
+    src: url(../fonts/Akrobat.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Akrobat'; 
+    src: url(../fonts/Akrobat.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url('../fonts/proxima-nova-light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('../fonts/proxima-nova-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'ProximaNovaSemiBold';
+    src: url('../fonts/proxima-nova-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --dark-blue: #202D44;
+    --white: #FFFFFF;
+    --blue: #00429F;
+    --gray: #989898;
+}
+
+body{
+	color: #000;
+	font-size: 16px;
+	font-family: "ProximaNovaRegular", sans-serif;
+}
+body p{
+	margin-top: 0;	
+	margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+.h1,h1{
+	font-size: 24px;
+	margin-bottom: 45px;
+	text-transform: uppercase;
+}
+
+.wrapper{
+	max-width: 1920px;
+	margin: 0 auto;
+	 min-height:100vh;
+   position:relative;
+   overflow: hidden;
+   min-width: 1200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+
+.wrapLabel{
+    position: relative;
+    margin-bottom: 0;
+}
+.wrapLabel span{
+    font-weight: 200;
+    padding-left: 25px;
+    font-size: 13px;
+    display: block;
+    position: relative;
+}
+.wrapLabel span a{
+    color: #ef5e07;
+}
+.wrapLabel span:before{
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    content: '';
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-radius: 3px;
+}
+.wrapLabel span:after{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 4px;
+    top: calc(50% - 4px);
+    content: '';
+    background: #dd6a1c;
+    border-radius: 2px;
+    opacity: 0;
+}
+.wrapLabel input:checked + span:after{
+    opacity: 1;
+}
+.wrapLabel input{
+    width: 10px !important;
+    height: 10px !important;
+    left: 0 !important;
+    top: 0 !important;
+    position: absolute !important;
+    opacity: 0 !important;
+}
+.flexSA{
+	display: flex;
+	justify-content:space-around;
+}
+
+.flexSB{
+	display: flex;
+	justify-content:space-between;
+}
+.flexCenter{
+	display: flex;
+	justify-content:center;
+}
+
+.flexAI{
+	display: flex;
+	align-items:center;
+}
+
+.flexW{
+	display: flex;
+	flex-wrap:wrap;
+}
+.flexColumn{
+	display: flex;
+	flex-direction:column;
+}
+.flexStart{
+	display: flex;
+	justify-content:flex-start;
+}
+.flexEnd{
+	display: flex;
+	justify-content:flex-end;
+}
+
+
+/* Шапка */
+
+.headerFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--dark-blue);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContent ul {
+    display: flex;
+    align-items: center;
+    gap: 43px;
+}
+
+.headerContent ul li a {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.headerContent ul li a:hover {
+    color: #ef5e07;
+}
+
+.headerSearch {
+    display: flex;
+    align-items: center;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 50px;
+    padding: 8px 21px;
+    max-width: 270px;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.searchBox:focus-within {
+    border-color: #ef5e07;
+}
+
+.searchInput {
+    font-family: 'ProximaNovaLight', sans-serif;
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 15px;
+    color: var(--dark-blue);
+}
+
+.searchInput::placeholder {
+    color: var(--dark-blue);
+}
+
+.searchButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.searchButton img {
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+
+/* Главный баннер */
+
+.all_cnt {
+    position: relative;
+}
+
+.mainBannerBgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.mainBannerBgImg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainBanner {
+    position: relative;
+    z-index: 1;
+    padding-top: 102px;
+    padding-bottom: 60px;
+    min-height: 1100px;
+}
+
+.mainBannerContent {
+    position: relative;
+    z-index: 2;
+}
+
+.mainBannerHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainBannerHeadContacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBannerHeadContactsInner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mainBannerHeadContacts span {
+    font-size: 13px;
+    padding-left: 24px;
+    color: var(--gray);
+}
+
+.mainBannerHeadContact {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.mainBannerHeadContactsInner .mainBannerHeadContact:last-child .mainBannerHeadContactTitle {
+    font-family: 'ProximaNovaSemiBold', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+/* --- Media styles --- */
+
+
+@media screen and (min-width:1450px){
+.wrapper .container{
+	width: 1440px;
+}
+
+
+
+}
+
+
+@media screen and (min-width:1200px){
+
+}
+@media screen and (max-width:1199px){
+	
+
+}
+
+@media screen and (max-width:991px){
+	
+
+}
+
+	
+
+@media screen and (max-width:767px){
+	
+
+}
+	
+@media screen and (max-width:675px){
+	
+}
+@media screen and (max-width:640px){
+	
+}
+@media screen and (max-width:600px){
+	
+}
+@media screen and (max-width:485px){
+	
+}
+@media screen and (max-width:425px){}
+@media screen and (max-width:400px){
+	
+}
+@media screen and (max-width:370px){
+	}
