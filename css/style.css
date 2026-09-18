@@ -497,7 +497,7 @@ button {
     color: var(--white);
 }
 
-.infoSaleBannerBtn {
+.infoBtn {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -505,14 +505,88 @@ button {
     border-radius: 30px;
     padding: 24px 43px;
     font-family: 'ProximaNovaBold', sans-serif;
-    font-size: 23px;
     font-weight: 700;
+    font-size: 23px;
     color: var(--blue);
 }
 
 
 
+/* Секция с Ценами */
 
+.priceHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.priceHeadTitle {
+    font-family: 'ProximaNovaBold', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--dark-blue);
+}
+
+.priceHeadBtn {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.priceInfoCards {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.priceInfoCard {
+    color: var(--blue);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F7F7F7;
+    padding: 36px 32px;
+    transition: all 0.3s ease;
+}
+
+.priceInfoCard:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.priceInfoCardTitle {
+    font-family: 'ProximaNovaBold', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.priceInfoCardDownloadBtn {
+    position: relative;
+    width: 24px;  
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.priceInfoCardDownloadBtn img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.priceInfoCardDownloadBtn .iconWhite {
+    opacity: 0;
+}
+
+.priceInfoCard:hover .iconBlue {
+    opacity: 0;
+}
+
+.priceInfoCard:hover .iconWhite {
+    opacity: 1;
+}
 
 
 /* --- Media styles --- */
