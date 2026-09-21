@@ -881,6 +881,31 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 
+/* Секция с картой */
+
+
+.maps {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* Отключаем стили Яндекс Карты */
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(60%);
+}
+
+.ymaps-b-balloon,
+.ymaps-b-balloon__layout,
+.ymaps-b-balloon__tail {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 /* --- Media styles --- */
 
 
