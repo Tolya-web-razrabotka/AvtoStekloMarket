@@ -217,12 +217,29 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .headerContent ul li a {
+    position: relative;
+    display: inline-block;
     color: var(--white);
     font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.headerContent ul li a:hover {
-    color: #ef5e07;
+.headerContent ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+}
+
+.headerContent ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 .headerSearch {
@@ -883,10 +900,9 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 /* Секция с картой */
 
-
 .maps {
     width: 100%;
-    height: 400px;
+    height: 553px;
     overflow: hidden;
 }
 
@@ -904,6 +920,137 @@ h1, .h1, h2, .h2, h3, .h3 {
 .ymaps-b-balloon__tail {
     background: transparent !important;
     box-shadow: none !important;
+}
+
+
+
+/* Footer */
+
+.footer {
+    background-color: var(--dark-blue);
+    padding: 47px 0px;
+}
+
+.footerContentHead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footerContentLinks {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+.footerContentLinksFirstColumn ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    row-gap: 17px;
+}
+
+.footerContentLinksFirstColumn ul li a {
+    position: relative;
+    display: inline-block;
+    color: var(--white);
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerContentLinksFirstColumn ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+}
+
+.footerContentLinksFirstColumn ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.footerContentLinksSecondColumn {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.footerContentBottom {
+    padding-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footerContentLinksAdressLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerContentLinksAdressLink {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.footerContentLinksSubtitle {
+    font-size: 13px;
+    color: #989898;
+    padding-left: 24px;
+}
+
+.footerContentLinksAdressLinkDesc {
+    font-size: 17px;
+    color: var(--white);
+}
+
+.footerCopyrightDesc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 10px;
+}
+
+.footerCopyrightLinks {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footerCopyrightLink {
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerCopyrightLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.35);
+    transition: background-color 0.3s ease;
+}
+
+.footerCopyrightLink:hover {
+    color: #fff;
+}
+
+.footerCopyrightLink:hover::after {
+    background-color: #fff;
 }
 
 /* --- Media styles --- */
