@@ -1,23 +1,4 @@
 @font-face {
-    font-family: 'Akrobat'; 
-    src: url(../fonts/Akrobat.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Akrobat'; 
-    src: url(../fonts/Akrobat.ttf) format('truetype');
-
-}
-@font-face {
-    font-family: 'Akrobat'; 
-    src: url(../fonts/Akrobat.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Akrobat'; 
-    src: url(../fonts/Akrobat.ttf) format('truetype');
-}
-
-
-@font-face {
     font-family: 'ProximaNovaLight';
     src: url('../fonts/proxima-nova-light.ttf') format('truetype');
     font-weight: 300;
@@ -32,9 +13,6 @@
     font-style: normal;
     font-display: swap;
 }
-
-
-
 
 @font-face {
     font-family: 'ProximaNovaSemiBold';
@@ -93,6 +71,24 @@ button {
 	font-size: 24px;
 	margin-bottom: 45px;
 	text-transform: uppercase;
+}
+
+.h2, h2 {
+    font-family: 'ProximaNovaBold', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--dark-blue);
+    max-width: 856px;
+    width: 100%;
+}
+
+.h2 span, h2  span {
+    color: var(--blue);
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .wrapper{
@@ -520,13 +516,6 @@ button {
     justify-content: space-between;
 }
 
-.priceHeadTitle {
-    font-family: 'ProximaNovaBold', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    color: var(--dark-blue);
-}
-
 .priceHeadBtn {
     background-color: var(--blue);
     color: var(--white);
@@ -586,6 +575,309 @@ button {
 
 .priceInfoCard:hover .iconWhite {
     opacity: 1;
+}
+
+
+/* Секция "Марок" */
+
+.brandsSection {
+    padding: 150px 0px;
+}
+
+.brandsMarks {
+    padding-top: 50px;
+}
+
+
+
+
+/* Секция с формой */
+
+.getContactSection {
+    position: relative;
+    background: #f4f6f9 url("../images/formBg.png") right center / contain no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.getContactContent {
+    padding: 45px 0px 50px 0px;
+    max-width: 710px;
+    width: 100%;
+}
+
+.getContactTitle span {
+    color: #2b4c8c;
+}
+
+.getCotactForm {
+    padding-top: 30px;
+}
+
+.getCotactForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formRow {
+    display: flex;
+    gap: 15px;
+}
+
+.inputWrapper {
+    position: relative;
+    flex: 1;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+}
+
+.getCotactForm input,
+.getCotactForm input,
+.getCotactForm textarea {
+    font-family: "ProximaNovaRegular", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border-radius: 17px;
+    font-size: 20px;
+    border: none;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    
+}
+
+.getCotactForm input::placeholder,
+.getCotactForm textarea::placeholder {
+    font-family: "ProximaNovaRegular", sans-serif;
+    font-weight: 400;
+    color: #4A5568;
+}
+
+
+
+.getCotactForm textarea {
+    resize: none;
+    min-height: 142px;
+    padding-left: 15px;
+}
+
+.formFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+    margin-top: 5px;
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #1a3b7a;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.submitBtn:hover {
+    background-color: #122a5c;
+}
+
+.btnIcon {
+    font-size: 18px;
+}
+.checkboxWrapper {
+    max-width: 360px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #4A5568;
+    font-family: "ProximaNovaLight", sans-serif;
+    font-weight: 300;
+}
+
+.checkboxWrapper label {
+    display: block;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.3;
+}
+
+.checkboxWrapper label span a {
+    text-decoration: underline;
+    color: #4A5568;
+    transition: all 0.3s ease;
+}
+
+.checkboxWrapper label span a:hover {
+    color: var(--blue);
+}
+
+.checkboxWrapper input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.checkboxWrapper label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 2px solid #4A5568;
+    border-radius: 4px;
+    background: transparent;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.checkboxWrapper label::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-60%) rotate(45deg) scale(0);
+    width: 4px;
+    height: 7px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: transform 0.2s ease;
+}
+
+.checkboxWrapper input[type="checkbox"]:checked + label::before {
+    background-color: #4A5568;
+    border-color: #4A5568;
+}
+
+.checkboxWrapper input[type="checkbox"]:checked + label::after {
+    transform: translateY(-60%) rotate(45deg) scale(1);
+}
+
+.checkboxWrapper input[type="checkbox"]:hover + label::before {
+    border-color: #2b4c8c;
+}
+
+.getContactBtn {
+    white-space: nowrap;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.advantagesInfoSection {
+    background-color: #1a2a44;
+    color: #fff;
+    padding: 66px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.advantagesInfoContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+}
+
+.advantagesCards {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.advantagesCard {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.advantagesCardTitle {
+    font-family: 'ProximaNovaBold', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--white);
+}
+
+.advantagesInfoLeft {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.advantagesInfoRight {
+    position: relative;
+}
+
+.advantagesInfoCertificate {
+    position: absolute;
+    bottom: -135px;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .formRow {
+        flex-direction: column;
+    }
+
+    .formFooter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .submitBtn {
+        width: 100%;
+    }
+
+    .featuresContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .getContactContent {
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* секция "Полезная информация" */
+
+.usefulInformationSection {
+    padding: 150px 0px;
+}
+
+.usefulInfoBtn {
+    width: 36px;
+    height: 36px;
 }
 
 
