@@ -304,7 +304,7 @@ h1, .h1, h2, .h2, h3, .h3 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 986px; 
+    /* height: 986px;  */
     z-index: 0;
     overflow: hidden;
 }
@@ -314,11 +314,10 @@ h1, .h1, h2, .h2, h3, .h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; 
 }
 .mainBannerSection {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     padding-top: 102px;
     padding-bottom: 60px;
     min-height: 1100px;
@@ -327,6 +326,9 @@ h1, .h1, h2, .h2, h3, .h3 {
 .mainBannerContent {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .mainBannerHead {
@@ -364,6 +366,81 @@ h1, .h1, h2, .h2, h3, .h3 {
     font-weight: 600;
 }
 
+.mainBannerLinks {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 73px;
+    transform: translateY(691px);
+}
+
+.mainBannerLinkBtn .infoBtn {
+    white-space: nowrap;
+}
+
+.mainBannerLinksCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.mainBannerLinksCard {
+    position: relative;
+    max-width: 210px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 25px;
+    min-height: 289px;
+    padding: 20px;
+    overflow: hidden; 
+}
+
+.mainBannerLinksCardTitle {
+    position: relative;
+    z-index: 2;
+    font-family: 'ProximaNovaSemiBold', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.mainBannerLinksCardImage {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    pointer-events: none; 
+}
+
+.mainBannerLinksCardImage img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: left bottom;
+}
+
+.mainBannerLinksCardArrow {
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    z-index: 3;
+}
+
+.mainBannerLinksCardArrow img {
+    width: 23px;
+    height: 23px;
+}
+
+
 /* Инфо баннер */
 
 .infoBannerSection {
@@ -375,7 +452,7 @@ h1, .h1, h2, .h2, h3, .h3 {
     padding: 92px 0px;
     background-color: #F7F7F7;
     border-radius: 100px;
-    transform: translateY(-200px);
+    transform: translateY(-100px);
 }
 
 .infoBannerHead {
@@ -617,6 +694,8 @@ h1, .h1, h2, .h2, h3, .h3 {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
 }
 
 .getContactContent {
@@ -688,7 +767,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 .getCotactForm textarea {
     resize: none;
     min-height: 142px;
-    padding-left: 15px;
+    padding-left: 20px;
 }
 
 .formFooter {
@@ -816,6 +895,8 @@ h1, .h1, h2, .h2, h3, .h3 {
     padding: 66px 0;
     width: 100%;
     margin-top: auto;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .advantagesInfoContent {
