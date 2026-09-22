@@ -309,11 +309,53 @@ h1, .h1, h2, .h2, h3, .h3 {
     overflow: hidden;
 }
 
-.mainBannerBgImg img {
+.mainBannerCarPhoto {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.mainBannerCallouts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mainBannerCallouts svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mainBannerCallouts #callouts > * {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.mainBannerBgImg.isAnimated .mainBannerCarPhoto {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mainBannerBgImg.isAnimated .mainBannerCallouts #callouts > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mainBannerCarPhoto,
+    .mainBannerCallouts #callouts > * {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 .mainBannerSection {
     position: relative;
