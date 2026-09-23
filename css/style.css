@@ -472,12 +472,23 @@ h1, .h1, h2, .h2, h3, .h3 {
 .mainBannerLinksCard {
     position: relative;
     box-sizing: border-box;
+    display: block;
     width: 210px;
     background-color: var(--white);
     border-radius: 25px;
     min-height: 289px;
     padding: 20px;
     overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.mainBannerLinksCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 66, 159, 0.18);
+}
+
+.mainBannerLinksCards .slick-list.dragging .mainBannerLinksCard {
+    pointer-events: none;
 }
 
 .mainBannerLinksCardTitle {
@@ -511,6 +522,12 @@ h1, .h1, h2, .h2, h3, .h3 {
     height: auto;
     object-fit: contain;
     object-position: left bottom;
+    transform-origin: left bottom;
+    transition: transform 0.35s ease;
+}
+
+.mainBannerLinksCard:hover .mainBannerLinksCardImage img {
+    transform: scale(1.06);
 }
 
 .mainBannerLinksCardArrow {
@@ -521,8 +538,14 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .mainBannerLinksCardArrow img {
+    display: block;
     width: 23px;
     height: 23px;
+    transition: transform 0.35s ease;
+}
+
+.mainBannerLinksCard:hover .mainBannerLinksCardArrow img {
+    transform: rotate(45deg) scale(1.08);
 }
 
 
