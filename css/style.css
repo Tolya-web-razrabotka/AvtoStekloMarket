@@ -435,6 +435,11 @@ h1, .h1, h2, .h2, h3, .h3 {
     margin-right: 25px;
 }
 
+.mainBannerLinksCards .slick-list {
+    padding: 20px 0;
+    margin: -20px 0;
+}
+
 .mainBannerLinksCards .slick-dots {
     display: flex;
     justify-content: flex-end;
@@ -479,12 +484,11 @@ h1, .h1, h2, .h2, h3, .h3 {
     min-height: 289px;
     padding: 20px;
     overflow: hidden;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: box-shadow 0.35s ease;
 }
 
 .mainBannerLinksCard:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 32px rgba(0, 66, 159, 0.18);
+    box-shadow: 0 0 20px rgba(0, 66, 159, 0.2);
 }
 
 .mainBannerLinksCards .slick-list.dragging .mainBannerLinksCard {
