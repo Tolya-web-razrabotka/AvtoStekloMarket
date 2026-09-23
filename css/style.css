@@ -260,7 +260,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .searchBox:focus-within {
-    border-color: #ef5e07;
+    border-color: var(--blue);
 }
 
 .searchInput {
@@ -700,6 +700,67 @@ h1, .h1, h2, .h2, h3, .h3 {
     color: var(--white);
 }
 
+.infoBtn.priceHeadBtn {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 0 0 0 var(--blue);
+}
+
+.infoBtn.priceHeadBtn:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    box-shadow: inset 0 0 0 2px var(--blue);
+}
+
+.infoBtnIcon {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.infoBtnIcon img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.infoBtn.priceHeadBtn .infoBtnIcon .iconBlue {
+    opacity: 0;
+}
+
+.infoBtn.priceHeadBtn:hover .infoBtnIcon .iconBlue {
+    opacity: 1;
+}
+
+.infoBtn.priceHeadBtn:hover .infoBtnIcon .iconWhite {
+    opacity: 0;
+}
+
+.infoBtn.infoSaleBannerBtn {
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.infoBtn.infoSaleBannerBtn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.infoBtn.infoSaleBannerBtn .infoBtnIcon .iconWhite {
+    opacity: 0;
+}
+
+.infoBtn.infoSaleBannerBtn:hover .infoBtnIcon .iconBlue {
+    opacity: 0;
+}
+
+.infoBtn.infoSaleBannerBtn:hover .infoBtnIcon .iconWhite {
+    opacity: 1;
+}
+
 .priceInfoCards {
     padding-top: 50px;
     display: grid;
@@ -972,6 +1033,29 @@ h1, .h1, h2, .h2, h3, .h3 {
     white-space: nowrap;
     background-color: var(--blue);
     color: var(--white);
+}
+
+.infoBtn.getContactBtn {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 0 0 0 var(--blue);
+}
+
+.infoBtn.getContactBtn:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    box-shadow: inset 0 0 0 2px var(--blue);
+}
+
+.infoBtn.getContactBtn .infoBtnIcon .iconBlue {
+    opacity: 0;
+}
+
+.infoBtn.getContactBtn:hover .infoBtnIcon .iconBlue {
+    opacity: 1;
+}
+
+.infoBtn.getContactBtn:hover .infoBtnIcon .iconWhite {
+    opacity: 0;
 }
 
 .advantagesInfoSection {
