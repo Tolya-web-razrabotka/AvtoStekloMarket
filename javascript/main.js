@@ -14,6 +14,17 @@ $('.sliderTreeOsTrack').slick({
 		easing:'easeInOutQuart',
 		slide:'.slideTOT'
   });
+
+$('.mainBannerLinksCards').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		variableWidth: true,
+		swipeToSlide: true,
+		arrows: false,
+		dots: false,
+		infinite: false,
+		speed: 500
+  });
 });
 
 

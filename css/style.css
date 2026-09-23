@@ -421,20 +421,29 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .mainBannerLinksCards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    width: 930px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.mainBannerLinksCards:not(.slick-initialized) {
+    display: flex;
     gap: 30px;
+}
+
+.mainBannerLinksCards.slick-initialized .mainBannerLinksCard {
+    margin-right: 25px;
 }
 
 .mainBannerLinksCard {
     position: relative;
-    max-width: 210px;
-    width: 100%;
+    box-sizing: border-box;
+    width: 210px;
     background-color: var(--white);
     border-radius: 25px;
     min-height: 289px;
     padding: 20px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .mainBannerLinksCardTitle {
