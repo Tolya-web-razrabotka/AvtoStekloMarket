@@ -549,7 +549,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .mainBannerLinksCard:hover .mainBannerLinksCardArrow img {
-    transform: rotate(45deg) scale(1.08);
+    transform: rotate(30deg) scale(1.08);
 }
 
 
@@ -750,7 +750,13 @@ h1, .h1, h2, .h2, h3, .h3 {
     inset: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.infoBtn.priceHeadBtn:hover .infoBtnIcon img,
+.infoBtn.infoSaleBannerBtn:hover .infoBtnIcon img,
+.infoBtn.getContactBtn:hover .infoBtnIcon img {
+    transform: rotate(30deg);
 }
 
 .infoBtn.priceHeadBtn .infoBtnIcon .iconBlue {
@@ -829,7 +835,11 @@ h1, .h1, h2, .h2, h3, .h3 {
     inset: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.priceInfoCard:hover .usefulInfoBtn img {
+    transform: rotate(30deg);
 }
 
 .priceInfoCardDownloadBtn .iconWhite {
@@ -1035,7 +1045,7 @@ h1, .h1, h2, .h2, h3, .h3 {
     position: absolute;
     left: 5px;
     top: 50%;
-    transform: translateY(-60%) rotate(45deg) scale(0);
+    transform: translateY(-60%) rotate(30deg) scale(0);
     width: 4px;
     height: 7px;
     border-right: 2px solid #fff;
@@ -1049,7 +1059,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .checkboxWrapper input[type="checkbox"]:checked + label::after {
-    transform: translateY(-60%) rotate(45deg) scale(1);
+    transform: translateY(-60%) rotate(30deg) scale(1);
 }
 
 .checkboxWrapper input[type="checkbox"]:hover + label::before {
