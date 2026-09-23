@@ -435,6 +435,40 @@ h1, .h1, h2, .h2, h3, .h3 {
     margin-right: 25px;
 }
 
+.mainBannerLinksCards .slick-dots {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+}
+
+.mainBannerLinksCards .slick-dots li {
+    line-height: 0;
+}
+
+.mainBannerLinksCards .slick-dots li button {
+    display: block;
+    width: 8px;
+    height: 5px;
+    padding: 0;
+    border: none;
+    border-radius: 2.5px;
+    background-color: var(--white);
+    font-size: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.mainBannerLinksCards .slick-dots li.slick-active button {
+    width: 53px;
+    background-color: var(--blue);
+}
+
 .mainBannerLinksCard {
     position: relative;
     box-sizing: border-box;

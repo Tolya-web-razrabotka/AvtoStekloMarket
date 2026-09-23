@@ -21,7 +21,10 @@ $('.mainBannerLinksCards').slick({
 		variableWidth: true,
 		swipeToSlide: true,
 		arrows: false,
-		dots: false,
+		dots: true,
+		customPaging: function () {
+			return '<button type="button"></button>';
+		},
 		infinite: false,
 		speed: 500
   });
