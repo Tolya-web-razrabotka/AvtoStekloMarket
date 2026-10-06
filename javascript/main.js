@@ -16,9 +16,8 @@ $('.sliderTreeOsTrack').slick({
   });
 
 $('.mainBannerLinksCards').slick({
-		slidesToShow: 1,
+		slidesToShow: 4,
 		slidesToScroll: 1,
-		variableWidth: true,
 		swipeToSlide: true,
 		arrows: false,
 		dots: true,

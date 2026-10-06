@@ -425,7 +425,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .mainBannerLinksCards {
-    width: 930px;
+    width: 940px;
     max-width: 100%;
     overflow: hidden;
 }
@@ -437,6 +437,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .mainBannerLinksCards.slick-initialized .mainBannerLinksCard {
     margin-right: 25px;
+}
+
+.mainBannerLinksCards .slick-slide:last-child .mainBannerLinksCard {
+    margin-right: 0;
 }
 
 .mainBannerLinksCards .slick-list {

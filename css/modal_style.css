@@ -1,0 +1,319 @@
+/*
+  Стилизация модалки обратного звонка (.callback-modal)
+  Палитра и шрифты взяты из основного стиля сайта (css/style.css):
+  --dark-blue: #202D44   --blue: #00429F   --white: #FFFFFF   --gray: #989898
+  ProximaNovaBold / ProximaNovaSemiBold / ProximaNovaRegular / ProximaNovaLight
+  Файл самодостаточный (цвета захардкожены), ничего глобально не переопределяет —
+  все селекторы начинаются с .callback-modal.
+*/
+
+.callback-modal {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 56px 48px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(32, 45, 68, 0.28);
+    font-family: 'ProximaNovaRegular', sans-serif;
+    color: #202D44;
+}
+
+.callback-modal__form {
+    position: relative;
+    z-index: 2;
+}
+
+/* Заголовки */
+
+.callback-modal .h1 {
+    font-family: 'ProximaNovaBold', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #202D44;
+    text-transform: uppercase;
+}
+
+.callback-modal .m0 {
+    margin: 0;
+}
+
+.callback-modal p.h1 + p.h1 {
+    margin-top: 6px;
+    color: #00429F;
+}
+
+/* Поля ввода (имя / телефон) */
+
+.callback-modal .flexColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.callback-modal form > .flexColumn:nth-of-type(1) {
+    margin-top: 32px;
+    margin-bottom: 28px;
+}
+
+.callback-modal .name,
+.callback-modal .tel {
+    width: 100%;
+}
+
+.callback-modal .name input,
+.callback-modal .tel input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 17px 20px 17px 50px;
+    border: 1px solid transparent;
+    border-radius: 17px;
+    background-color: #F7F7F7;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 18px 18px;
+    font-family: 'ProximaNovaRegular', sans-serif;
+    font-size: 16px;
+    color: #202D44;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.callback-modal .name input {
+    background-image: url('../images/svg/form_user.svg');
+}
+
+.callback-modal .tel input {
+    background-image: url('../images/svg/form_phone.svg');
+}
+
+.callback-modal .name input::placeholder,
+.callback-modal .tel input::placeholder {
+    color: #989898;
+}
+
+/* Автозаполнение браузера перекрашивает фон инпута своим служебным
+   стилем и затирает иконку — принудительно возвращаем наш фон и иконку. */
+
+.callback-modal .name input:-webkit-autofill,
+.callback-modal .name input:-webkit-autofill:hover,
+.callback-modal .name input:-webkit-autofill:focus,
+.callback-modal .tel input:-webkit-autofill,
+.callback-modal .tel input:-webkit-autofill:hover,
+.callback-modal .tel input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #202D44;
+    -webkit-box-shadow: 0 0 0 1000px #F7F7F7 inset;
+    box-shadow: 0 0 0 1000px #F7F7F7 inset;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 18px 18px;
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+.callback-modal .name input:-webkit-autofill,
+.callback-modal .name input:autofill {
+    background-image: url('../images/svg/form_user.svg');
+}
+
+.callback-modal .tel input:-webkit-autofill,
+.callback-modal .tel input:autofill {
+    background-image: url('../images/svg/form_phone.svg');
+}
+
+.callback-modal .name input:autofill,
+.callback-modal .tel input:autofill {
+    background-color: #F7F7F7;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 18px 18px;
+}
+
+.callback-modal .name input:focus,
+.callback-modal .tel input:focus {
+    border-color: #00429F;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(0, 66, 159, 0.12);
+}
+
+/* Согласие / чекбокс (визуальный язык как у .checkboxWrapper на сайте) + кнопка */
+
+.callback-modal form > .flexColumn:nth-of-type(2) {
+    gap: 18px;
+}
+
+.callback-modal input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.callback-modal input[type="checkbox"] + label {
+    position: relative;
+    display: block;
+    padding-left: 28px;
+    font-family: 'ProximaNovaLight', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #4A5568;
+    cursor: pointer;
+}
+
+.callback-modal input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 17px;
+    height: 17px;
+    box-sizing: border-box;
+    border: 2px solid #4A5568;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.callback-modal input[type="checkbox"] + label::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    width: 4px;
+    height: 8px;
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    transform: rotate(35deg) scale(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+.callback-modal input[type="checkbox"]:checked + label::before {
+    background-color: #00429F;
+    border-color: #00429F;
+}
+
+.callback-modal input[type="checkbox"]:checked + label::after {
+    transform: rotate(35deg) scale(1);
+}
+
+.callback-modal input[type="checkbox"]:hover + label::before {
+    border-color: #00429F;
+}
+
+.callback-modal label a {
+    color: #00429F;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.callback-modal label a:hover {
+    color: #202D44;
+}
+
+/* Кнопка отправки */
+
+.callback-modal button.red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: #00429F;
+    color: #FFFFFF;
+    font-family: 'ProximaNovaBold', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.callback-modal button.red::after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    background: url('../images/svg/arrowBtnWhite.svg') no-repeat center / contain;
+    transition: transform 0.3s ease;
+}
+
+.callback-modal button.red:hover {
+    background-color: #002d6b;
+}
+
+.callback-modal button.red:hover::after {
+    transform: rotate(15deg);
+}
+
+.callback-modal button.red:active {
+    transform: scale(0.98);
+}
+
+/* Декоративная иллюстрация */
+
+.callback-modal__form > img {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    z-index: 1;
+    max-width: 190px;
+    width: 40%;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Кнопка закрытия (Magnific Popup) */
+
+.callback-modal .mfp-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 66, 159, 0.08);
+    color: #202D44;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.callback-modal .mfp-close:hover {
+    background-color: #00429F;
+    color: #FFFFFF;
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 600px) {
+    .callback-modal {
+        padding: 40px 24px;
+        border-radius: 24px;
+    }
+
+    .callback-modal .h1 {
+        font-size: 24px;
+    }
+
+    .callback-modal__form > img {
+        max-width: 120px;
+        opacity: 0.85;
+    }
+}

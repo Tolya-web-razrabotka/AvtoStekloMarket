@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Предпросмотр модалки</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="modal_style.css">
+<style>
+  body {
+    background: #0f1626;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+
+<div class="callback-modal callback-modal-toggle">
+  <div class="callback-modal__form">
+    <form class="form-submit-toggle" action="#">
+      <input type="hidden" name="head" value="Заявка на обратный звонок с сайта avtosteklomarket.ru">
+      <p class="h1 m0">ЗАПОЛНИТЕ ФОРМУ</p>
+      <p style="text-transform: none; font-weight: normal; font-size: 22px; margin-bottom: 20px;" class="h1 m0">и мы свяжемся с вами</p>
+      <div class="flexColumn">
+        <div class="name"><input type="text" name="Имя" placeholder="Имя"></div>
+        <div class="tel m20v"><input name="Телефон" type="text" placeholder="+7 000 000 00 00"></div>
+      </div>
+      <div class="flexColumn">
+        <input type="checkbox" id="checkF3" required="">
+        <label for="checkF3">Ознакомлен и <a href="#">согласен </a>с <a href="#">политикой </a>конфиденциальности сайта</label>
+        <button class="red">Отправить</button>
+      </div>
+    </form>
+    <img src="../images/linksCards/1.png" alt="">
+  </div>
+  <button title="Close (Esc)" type="button" class="mfp-close">&times;</button>
+</div>
+
+</body>
+</html>
